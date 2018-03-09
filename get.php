@@ -4,7 +4,7 @@ class fichier{
 	private $ch;
 	private $filename;
 	private $pw;
-	function login(){
+	function login($user, $pass){
 	$this->ch = curl_init();
 	curl_setopt($this->ch, CURLOPT_POST, TRUE);
 	curl_setopt($this->ch, CURLOPT_POSTFIELDS, ["lt" => "on", "mail" => $user, "pass" => $pass, "purge" => "on", "valider" => "Send"]);
